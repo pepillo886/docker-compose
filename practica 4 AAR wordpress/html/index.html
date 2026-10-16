@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Docker Compose</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --primary: #2496ed;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    code {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guía de Docker Compose</h1>
+    <p>Aprende a orquestar y gestionar aplicaciones multicontenedor con archivos YAML interactivos.</p>
+  </header>
+
+
+
+  <main>
+    <div class="card">
+      <h2>1. Fundamentos y Estructura Base</h2>
+      <p>Docker Compose permite definir y ejecutar aplicaciones compuestas por múltiples contenedores usando un único archivo de configuración declarativo.</p>
+      <ul>
+        <li>Sintaxis del archivo <code>docker-compose.yml</code>.</li>
+        <li>Bloques principales: <code>services</code>, <code>networks</code> y <code>volumes</code>.</li>
+        <li>Comandos esenciales: <code>docker compose up -d</code>, <code>down</code>, <code>ps</code> y <code>logs</code>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>2. Servicios, Construcción y Redes</h2>
+      <p>Organiza cómo interactúan tus aplicaciones web, bases de datos y microservicios dentro de un entorno aislado.</p>
+      <ul>
+        <li>Uso de imágenes de Docker Hub o compilación local mediante <code>Dockerfile</code>.</li>
+        <li>Gestión de credenciales y variables con archivos <code>.env</code>.</li>
+        <li>Creación de redes privadas para una comunicación segura entre servicios.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Persistencia de Datos</h2>
+      <p>Asegura que los datos de tu aplicación no se pierdan al reiniciar o actualizar los contenedores.</p>
+      <ul>
+        <li><strong>Volúmenes nombrados:</strong> Ideales para bases de datos en producción.</li>
+        <li><strong>Bind Mounts:</strong> Mapeo directo de carpetas locales para desarrollo en tiempo real.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Despliegue Avanzado y Producción</h2>
+      <p>Optimiza el rendimiento, controla las dependencias y prepara tu infraestructura para entornos reales.</p>
+      <ul>
+        <li>Control del orden de arranque con <code>depends_on</code> y <code>healthcheck</code>.</li>
+        <li>Separación de entornos (desarrollo vs. producción) mediante múltiples archivos YAML.</li>
+        <li>Escalado de réplicas de servicios según la demanda.</li>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>
